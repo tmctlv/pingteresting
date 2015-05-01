@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501193829) do
+ActiveRecord::Schema.define(version: 20150501204047) do
 
   create_table "pins", force: :cascade do |t|
     t.string   "description"
@@ -28,9 +28,13 @@ ActiveRecord::Schema.define(version: 20150501193829) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.integer  "user_id"
+    t.string   "hinhanh_file_name"
+    t.string   "hinhanh_content_type"
+    t.integer  "hinhanh_file_size"
+    t.datetime "hinhanh_updated_at"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
