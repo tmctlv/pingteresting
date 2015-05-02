@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.5'
+gem 'jquery-turbolinks'
+gem 'masonry-rails'
 gem 'paperclip', '~> 4.2'
 gem 'devise', '~> 3.4.1'
 gem 'bootstrap-sass'
